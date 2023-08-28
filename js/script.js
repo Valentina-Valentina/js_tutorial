@@ -43,10 +43,10 @@ function handlerAddPosts() {
 function handlerFormSumbit(evt) {
     evt.preventDefault();
 
-    const { name, description } = evt.currentTarget.elements;
+    const { title, body } = evt.currentTarget.elements;
     const data = {
-        title: name.value,
-        body: description.value,
+        title: title.value,
+        body: body.value,
     };
 
     addPostService(data).then((obj) => {
